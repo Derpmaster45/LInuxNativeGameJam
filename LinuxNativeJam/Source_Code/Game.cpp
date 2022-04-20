@@ -1,5 +1,7 @@
 #include <iostream>
 #include<string>
+#include<list>
+#include<iterator>
 #include "Character.h"
 #include "functions.h"
 
@@ -33,7 +35,9 @@ default:
 std::cout<<"Please enter a number.";
     break;
 }
-
+ std::cout<<"You decide to go fishing, and while you are fishing a bottle floats by you, do you pick it up, or leave it alone?";
+ std::string playerChoice;
+ //std::list inventory;
 }
 
 // main program function
