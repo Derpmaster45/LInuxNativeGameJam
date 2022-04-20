@@ -1,8 +1,8 @@
 #pragma once
 #include<string>
-void WeaponDestroyed(int playerOccupation)
+void WeaponDestroyed() // add the weapon name 
 {
-
+    
 }
 void CheckMap(std::string location ) 
 {
