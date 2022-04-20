@@ -5,6 +5,7 @@
 #include "Character.h"
 #include "functions.h"
 
+
 // functions
 
 void PlayGame()
@@ -35,9 +36,46 @@ default:
 std::cout<<"Please enter a number.";
     break;
 }
- std::cout<<"You decide to go fishing, and while you are fishing a bottle floats by you, do you pick it up, or leave it alone?";
+ std::cout<<"You decide to go fishing, and while you are fishing a bottle floats by you, do you pick it up, or leave it alone?"<<std::endl;;
  std::string playerChoice;
  //std::list inventory;
+ if(playerChoice=="leave it alone"|| playerChoice=="Leave it alone"||playerChoice=="LEAVE IT ALONE")
+ {
+     std::cout<<"You leave to bottle alone.\n";
+ }
+ else
+ {
+    std::cout<<"You pick up the bottle and notice a rolled up piece of paper inside, but you need to find a way to open the bottle.\n How are you gonna open the bottle?\n";
+    std::cin>>playerChoice;
+    if(playerChoice=="Throw Bottle"|| playerChoice=="throw bottle")
+    {
+
+    }
+    else if(playerChoice=="use knife"||playerChoice=="Use Knife")
+    {
+
+    }
+    else if(playerChoice=="")
+    {
+        std::cout<<"Command not recognized!! Please try again.\n";
+        std::cin>>playerChoice;
+    }
+    else if (playerChoice=="use bottle opener")
+    {
+        std:: cout<<"Bottle opener hasn't been invented yet\n Try another tool.";
+        std::cin>>playerChoice;
+    }
+    else if(playerChoice== "use corkscrew"||playerChoice=="Use Corkscrew")
+    {
+
+    }
+    else
+    {
+        std::cout<<"Command not recognized. Please try again.";
+        
+    }
+ }
+
 }
 
 // main program function
