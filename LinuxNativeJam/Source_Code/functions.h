@@ -12,3 +12,7 @@ void CheckBalance(int moneyRemaining)
 {
     std::cout<<"You have "<<moneyRemaining <<" silver pieces remaining";
 }
+void ExitGame()
+{
+    // enter exit code here
+}
