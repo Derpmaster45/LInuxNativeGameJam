@@ -7,6 +7,7 @@ private:
 public:
     Character(int PlayerOccupation);
     ~Character();
+    //getPlayerOccupation()
 };
 
 Character::Character(int PlayerOccupation)

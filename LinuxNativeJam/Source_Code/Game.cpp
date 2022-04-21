@@ -49,7 +49,7 @@ std::cout<<"Please enter a number.";
     std::cin>>playerChoice;
     if(playerChoice=="Throw Bottle"|| playerChoice=="throw bottle")
     {
-
+        std::cout<<"You throw the bottle on the ground and it breaks.\n You carefully remove the paper from the shattered glass.";
     }
     else if(playerChoice=="use knife"||playerChoice=="Use Knife")
     {
@@ -62,16 +62,24 @@ std::cout<<"Please enter a number.";
     }
     else if (playerChoice=="use bottle opener")
     {
-        std:: cout<<"Bottle opener hasn't been invented yet\n Try another tool.";
+        std:: cout<<"Bottle opener hasn't been invented yet\n Try another tool.\n";
         std::cin>>playerChoice;
     }
     else if(playerChoice== "use corkscrew"||playerChoice=="Use Corkscrew")
     {
-
+        std::cout<<"You open the bottle without issue. You extract the paper from the bottle\n";
     }
     else
     {
-        std::cout<<"Command not recognized. Please try again.";
+        std::cout<<"Command not recognized. Please try again.\n";
+
+    }
+    std::cout<<"You have the paper out of the bottle, would you like to look at it?\n";
+    std::cin>>playerChoice;
+    if(playerChoice=="Yes"|| playerChoice=="yes"||playerChoice=="Look at map"||playerChoice=="look at map"||playerChoice=="yes"||playerChoice=="Yes")
+    {
+        std::cout<<"You unravel the paper,and study it closely for roughly about 2 hours. You figure out it is a tresure map";
+        std::cout<<"Would you like to start your hunt now ,or wait until morning?";
         
     }
  }
