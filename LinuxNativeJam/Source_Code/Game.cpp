@@ -97,9 +97,44 @@ void PlayGame()
         std::cin>>playerAction;
         break;
  }
-    if(bottleCollected==true)
+    if(bottleCollected==true&& bottleOpened==true)
     {
-        
+        std::cout<<"You have opened the bottle,and unfurreled the paper.You study it closely, and figure out that it is a treasure map.\n Would you like to leave today or tomorrow\n Leave when: \n";
+        std::string leavingWhen;
+        std::cin>>leavingWhen; 
+        if(leavingWhen=="Today"||leavingWhen=="today")
+        {
+            std::cout<<"You quickly gather things you think you may need for this trip";
+            bool leftEarly=true;
+            if(playerOccupation==1)
+            {
+                playerMoney=500;
+                CheckBalance(playerMoney);
+            }
+            else if(playerOccupation==2)
+            {
+                playerMoney=7500;
+                CheckBalance(playerMoney);
+
+            }
+        }
+        else if (leavingWhen=="Tomorrow"||leavingWhen=="tomorrow")
+        {
+            if(playerOccupation==1)
+            {
+                playerMoney=1000;
+                CheckBalance(playerMoney);
+            }
+            else if(playerOccupation==2)
+            {
+                playerMoney=15000;
+                CheckBalance(playerMoney);
+            }
+            std::cout<<"Your off on your voyage! How far would you like to travel? \n";
+            int milesTraveled;
+            std::cin>>milesTraveled;
+
+        }
     }
 }
 
