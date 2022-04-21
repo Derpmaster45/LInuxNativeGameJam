@@ -47,39 +47,62 @@ void PlayGame()
  std::cout<<"You decide to go fishing, and while you are fishing a bottle floats by you, 1(do you pick it up, or 2(leave it alone?"<<std::endl;
  std::cin>>playerChoice;
  bool bottleOpened;
+ bool bottleCollected;
  switch (playerChoice)
  {
  case 1:
+    bottleCollected=true;
      std::cout<<"You decided to pick up the bottle, it's corked shut. How are you going to open the bottle?\n";
      std::cout<<"1) Bottle Opener\n 2)Knife\n3) Shoe\n 4)Throw it\n";
      std::cin>>playerAction;
+     while(playerAction==1)
+     {}
      switch(playerAction)
      {
         case 1: 
-         std::cout<<"You can't use something that has not been invented yet\n";
+         std::cout<<"You can't use something that has not been invented yet. Please try again.\n";
+         std::cin>>playerAction;
          break;
          case 2:
+         bottleCollected=true;
          std::cout<<"You open the bottle by carefully using a knife";
          bottleOpened=true;
          break;
          case 3: 
          std::cout<<"You find a solid rock to try and uncork the bottle";
+         bottleCollected=true;
          bottleOpened=true;
          break;
          case 4: 
          std::cout<<"You throw it as hard as you can at a boulder you found, breaking the bottle on impact.\nYou retrive the paper from the shards of glass\n";
+         bottleCollected,bottleOpened=true;
          break;
          default: 
+         std::cout<<"Enter a number 1-4 to open the bottle";
+         std::cin>> playerAction;
+
          break;
 
      }
      
-     break;
- 
-    default:
-     break;
+        break;
+
+        case 2:
+        std::cout<<"You left the bottle alone\n";
+        bottleOpened=false;
+        bottleCollected=false;
+        break;
+        default:
+        std::cout<<"Please enter 1 or 2 to choose what to do.\n";
+        std::cin>>playerAction;
+        break;
  }
+    if(bottleCollected==true)
+    {
+        
+    }
 }
+
 }
 // main program function
 int main()
