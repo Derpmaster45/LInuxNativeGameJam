@@ -10,6 +10,8 @@
 
 void PlayGame()
 {
+    bool isOccupationChosen=false;
+ while(isOccupationChosen==false){
     
 std::cout<<"It is a bright sunny day in June of 1884, and you have just gotten done with your work for the day.\nWhat is it that you do for a living?";
 std::cout<<"1) a blacksmith, who can get a discount on materials used to repair weapons, and can fix other peoples weapons for a fee.\n 2) a wealthy banker, who has alot of money, but cannot repair tools.\n";
@@ -24,6 +26,7 @@ case 1:{
     jobName="Blacksmith";
     std::cout<<"You are a "<<jobName <<" that means you can get discounts on raw materials. On top of that, you can fix people's tools if they break.\n";
     Character blacksmithChar= Character(1);
+    isOccupationChosen=true;
     break;
 }
 
@@ -37,6 +40,7 @@ default:
 std::cout<<"Please enter a number.";
     break;
 }
+ }
  std::cout<<"You decide to go fishing, and while you are fishing a bottle floats by you, do you pick it up, or leave it alone?"<<std::endl;;
  std::string playerChoice;
  //std::list inventory;
@@ -69,7 +73,7 @@ std::cout<<"Please enter a number.";
         std:: cout<<"Bottle opener hasn't been invented yet\n Try another tool.\n";
         std::cin>>playerChoice;
     }
-    else if(playerChoice== "use corkscrew"||playerChoice=="Use Corkscrew")
+    else if(playerChoice=="use corkscrew"||playerChoice=="Use Corkscrew")
     {
         std::cout<<"You open the bottle without issue. You extract the paper from the bottle\n";
         isBottleOpened=true;
@@ -86,23 +90,31 @@ std::cout<<"Please enter a number.";
         std::cout<<"You unravel the paper,and study it closely for roughly about 2 hours. You figure out it is a tresure map\n";
         std::cout<<"Would you like to start your hunt now ,or wait until morning?\n";
         std::cin>>playerChoice;
+        bool huntStarted=false;
+        while(huntStarted==false){
         if(playerChoice=="Wait until morning")
         {
             std::cout<< "You decide to wait until morning taking the rest of the evening to prep for your long journey ahead.\n";
         }
         else if(playerChoice=="Start hunt now")
         {
-            std::cout<<"Without hesitation you grab what you think you will need on this journey and leave, ";
+            std::cout<<"Without hesitation you grab what you think you will need on this journey, and you embark on an adventure into the unknown.\n ";
+            huntStarted=true;
         }
         else
         {
             std::cout<<"Please enter one of the following choices start hunt now or wait until morning\n";
             std::cin>> playerChoice;
         }
+
+        }
+        while (huntStarted==true)
+        {
+            /* code */
+        }
+        
     }
  }
-
-
 
 // main program function
 int main()
