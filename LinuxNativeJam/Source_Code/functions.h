@@ -8,3 +8,7 @@ void CheckMap(std::string location )
 {
 
 }
+void CheckBalance(int moneyRemaining)
+{
+    std::cout<<"You have "<<moneyRemaining <<" silver pieces remaining";
+}
