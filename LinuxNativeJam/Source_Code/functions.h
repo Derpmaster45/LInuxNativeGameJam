@@ -16,13 +16,12 @@ void ExitGame()
 {
     // enter exit code here
 }
-int TimeToReachDestination(int milesTraveled)
+double RateOfSpeed(double distanceTraveled, double timeSpentTraveling)
 {
-    // donkeys travel about 43.5 mph
-    int rate = 44/milesTraveled;
-    return 0;
+    double rate=distanceTraveled/timeSpentTraveling;
+    return rate;
 }
-void DistanceToNextTown(std::string townName)
+void PrintDistanceToNextTown(int distanceToNextTown, int milesTraveled)
 {
 
 }

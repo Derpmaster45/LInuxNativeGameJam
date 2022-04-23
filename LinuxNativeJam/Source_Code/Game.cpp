@@ -130,12 +130,20 @@ void PlayGame()
                 playerMoney=15000;
                 CheckBalance(playerMoney);
             }
-            std::cout<<"Your off on your voyage! Before you leave you get a few donkies to pull your wagon\n How far would you like to travel? \n";
-            int milesTraveled;
+            std::cout<<"Your off on your voyage! How far would you like to travel? \n";
+            double milesTraveled;
+            double distanceToNextTown=40;
+            double timeTraveled;
             std::cin>>milesTraveled;
-
-
-
+            std::cout<<"How many hours will you be traveling today?\n The first town is"<<distanceToNextTown<<" away.";
+            std::cin>>timeTraveled;
+            double rateOfSpeed=RateOfSpeed(milesTraveled,timeTraveled);
+            double totalMilesTraveled=milesTraveled;
+            if(totalMilesTraveled<distanceToNextTown)
+            {
+                std::cout<<"You have "<<distanceToNextTown-milesTraveled <<" to the next town.";
+            
+            }
         }
     }
 }
