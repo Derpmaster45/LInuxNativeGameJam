@@ -130,9 +130,11 @@ void PlayGame()
                 playerMoney=15000;
                 CheckBalance(playerMoney);
             }
-            std::cout<<"Your off on your voyage! How far would you like to travel? \n";
+            std::cout<<"Your off on your voyage! Before you leave you get a few donkies to pull your wagon\n How far would you like to travel? \n";
             int milesTraveled;
             std::cin>>milesTraveled;
+
+
 
         }
     }
