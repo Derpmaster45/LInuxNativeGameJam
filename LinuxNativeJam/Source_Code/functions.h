@@ -21,3 +21,50 @@ double RateOfSpeed(double distanceTraveled, double timeSpentTraveling)
     double rate=distanceTraveled/timeSpentTraveling;
     return rate;
 }
+void HandleTravel(int distanceTraveled,int milesToNextTown)
+{
+
+    if(distanceTraveled<distanceTraveled)
+            {
+                std::cout<<"You have "<<milesToNextTown-distanceTraveled <<" to the next town.";
+            
+            }
+            else if(distanceTraveled==milesToNextTown)
+            {
+                std::cout<<"You have made it to the the next town.\nWould you like to 1) Stop and gather information or 2) Keep moving?\n";
+                int playerChoice;
+                std::cin>>playerChoice;
+                switch (playerChoice)
+                {
+                case 1:
+                    #pragma region 
+                    std::cout<<"Where would you like to go to gather information?\n 1) Tavern 2)";
+                    int actionChoice;
+                    std::cin>>actionChoice;
+                    #pragma region 
+                    switch (actionChoice)
+                    {
+                    case 1:
+                    std::cout<<"This code has been reached---TESTING Purpose ONLY";
+                        break;
+                    case 2:
+                     std::cout<<"This code has been reached---TESTING Purpose ONLY";
+                    break;
+                    default:
+                        break;
+                    }
+                    #pragma endregion
+                    #pragma endregion
+                    break;
+                    case 2:
+                    std::cout<<"Enter a valid number!\n";
+                    #pragma region 
+                    #pragma endregion
+                    break;
+                
+                default:
+                    std::cout<<"Enter a valid number!\n";
+                    break;
+                }
+            }
+}

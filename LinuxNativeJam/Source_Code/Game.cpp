@@ -108,11 +108,59 @@ void PlayGame()
             {
                 playerMoney=500;
                 CheckBalance(playerMoney);
+                std::cout<<"Your off on your voyage! How far would you like to travel? \n";
+            double milesTraveled;
+            double distanceToNextTown=40;
+            double timeTraveled;
+            std::cin>>milesTraveled;
+            std::cout<<"How many hours will you be traveling today?\n The first town is"<<distanceToNextTown<<" away.";
+            std::cin>>timeTraveled;
+            double rateOfSpeed=RateOfSpeed(milesTraveled,timeTraveled);
+            double totalMilesTraveled=milesTraveled;
+            }
+            else if(playerOccupation==2)
+            {
+                playerMoney=15000;
+                CheckBalance(playerMoney);
+                std::cout<<"Your off on your voyage! How far would you like to travel? \n";
+            double milesTraveled;
+            double distanceToNextTown=40;
+            double timeTraveled;
+            std::cin>>milesTraveled;
+            std::cout<<"How many hours will you be traveling today?\n The first town is"<<distanceToNextTown<<" away.";
+            std::cin>>timeTraveled;
+            double rateOfSpeed=RateOfSpeed(milesTraveled,timeTraveled);
+            double totalMilesTraveled=milesTraveled;
+            HandleTravel(milesTraveled,distanceToNextTown);
             }
             else if(playerOccupation==2)
             {
                 playerMoney=7500;
                 CheckBalance(playerMoney);
+                std::cout<<"Your off on your voyage! How far would you like to travel? \n";
+            double milesTraveled;
+            double distanceToNextTown=40;
+            double timeTraveled;
+            std::cin>>milesTraveled;
+            std::cout<<"How many hours will you be traveling today?\n The first town is"<<distanceToNextTown<<" away.";
+            std::cin>>timeTraveled;
+            double rateOfSpeed=RateOfSpeed(milesTraveled,timeTraveled);
+            double totalMilesTraveled=milesTraveled;
+            }
+            else if(playerOccupation==2)
+            {
+                playerMoney=15000;
+                CheckBalance(playerMoney);
+                std::cout<<"Your off on your voyage! How far would you like to travel? \n";
+            double milesTraveled;
+            double distanceToNextTown=40;
+            double timeTraveled;
+            std::cin>>milesTraveled;
+            std::cout<<"How many hours will you be traveling today?\n The first town is"<<distanceToNextTown<<" away.";
+            std::cin>>timeTraveled;
+            double rateOfSpeed=RateOfSpeed(milesTraveled,timeTraveled);
+            double totalMilesTraveled=milesTraveled;
+            HandleTravel(milesTraveled,distanceToNextTown);
 
             }
         }
@@ -122,13 +170,7 @@ void PlayGame()
             {
                 playerMoney=1000;
                 CheckBalance(playerMoney);
-            }
-            else if(playerOccupation==2)
-            {
-                playerMoney=15000;
-                CheckBalance(playerMoney);
-            }
-            std::cout<<"Your off on your voyage! How far would you like to travel? \n";
+                std::cout<<"Your off on your voyage! How far would you like to travel? \n";
             double milesTraveled;
             double distanceToNextTown=40;
             double timeTraveled;
@@ -137,58 +179,36 @@ void PlayGame()
             std::cin>>timeTraveled;
             double rateOfSpeed=RateOfSpeed(milesTraveled,timeTraveled);
             double totalMilesTraveled=milesTraveled;
+            }
+            else if(playerOccupation==2)
+            {
+                playerMoney=15000;
+                CheckBalance(playerMoney);
+                std::cout<<"Your off on your voyage! How far would you like to travel? \n";
+            double milesTraveled;
+            double distanceToNextTown=40;
+            double timeTraveled;
+            std::cin>>milesTraveled;
+            std::cout<<"How many hours will you be traveling today?\n The first town is"<<distanceToNextTown<<" away.";
+            std::cin>>timeTraveled;
+            double rateOfSpeed=RateOfSpeed(milesTraveled,timeTraveled);
+            double totalMilesTraveled=milesTraveled;
+            HandleTravel(milesTraveled,distanceToNextTown);
+            totalMilesTraveled+=milesTraveled;
+            if(totalMilesTraveled>=40)
+            {
+                distanceToNextTown=120;
+                std::cout<<"The distance to the next town is "<<distanceToNextTown <<" miles";
+                HandleTravel(milesTraveled,distanceToNextTown);
+            }
+            }
+            
         }
     }
 }
 
 }
-void HandleTravel(int distanceTraveled,int milesToNextTown)
-{
 
-    if(distanceTraveled<distanceTraveled)
-            {
-                std::cout<<"You have "<<milesToNextTown-distanceTraveled <<" to the next town.";
-            
-            }
-            else if(distanceTraveled==milesToNextTown)
-            {
-                std::cout<<"You have made it to the the next town.\nWould you like to 1) Stop and gather information or 2) Keep moving?\n";
-                int playerChoice;
-                std::cin>>playerChoice;
-                switch (playerChoice)
-                {
-                case 1:
-                    #pragma region 
-                    std::cout<<"Where would you like to go to gather information?\n 1) Tavern 2)";
-                    int actionChoice;
-                    std::cin>>actionChoice;
-                    #pragma region 
-                    switch (actionChoice)
-                    {
-                    case 1:
-                    std::cout<<"This code has been reached---TESTING Purpose ONLY";
-                        break;
-                    case 2:
-                     std::cout<<"This code has been reached---TESTING Purpose ONLY";
-                    break;
-                    default:
-                        break;
-                    }
-                    #pragma endregion
-                    #pragma endregion
-                    break;
-                    case 2:
-                    std::cout<<"Enter a valid number!\n";
-                    #pragma region 
-                    #pragma endregion
-                    break;
-                
-                default:
-                    std::cout<<"Enter a valid number!\n";
-                    break;
-                }
-            }
-}
 // main program function
 int main()
 {
