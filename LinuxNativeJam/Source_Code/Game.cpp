@@ -55,8 +55,7 @@ void PlayGame()
      std::cout<<"You decided to pick up the bottle, it's corked shut. How are you going to open the bottle?\n";
      std::cout<<"1) Bottle Opener\n 2)Knife\n3) Shoe\n 4)Throw it\n";
      std::cin>>playerAction;
-     while(playerAction<=1)
-     {
+    
      switch(playerAction)
      {
         case 1: 
@@ -83,7 +82,6 @@ void PlayGame()
 
          break;
 
-     }
      }
         break;
 
@@ -164,9 +162,23 @@ void HandleTravel(int distanceTraveled,int milesToNextTown)
                     std::cout<<"Where would you like to go to gather information?\n 1) Tavern 2)";
                     int actionChoice;
                     std::cin>>actionChoice;
+                    #pragma region 
+                    switch (actionChoice)
+                    {
+                    case 1:
+                    std::cout<<"This code has been reached---TESTING Purpose ONLY";
+                        break;
+                    case 2:
+                     std::cout<<"This code has been reached---TESTING Purpose ONLY";
+                    break;
+                    default:
+                        break;
+                    }
+                    #pragma endregion
                     #pragma endregion
                     break;
                     case 2:
+                    std::cout<<"Enter a valid number!\n";
                     #pragma region 
                     #pragma endregion
                     break;
