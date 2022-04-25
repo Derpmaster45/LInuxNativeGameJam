@@ -160,12 +160,19 @@ void HandleTravel(int distanceTraveled,int milesToNextTown)
                 switch (playerChoice)
                 {
                 case 1:
-                    /* code */
+                    #pragma region 
+                    std::cout<<"Where would you like to go to gather information?\n 1) Tavern 2)";
+                    int actionChoice;
+                    std::cin>>actionChoice;
+                    #pragma endregion
                     break;
                     case 2:
+                    #pragma region 
+                    #pragma endregion
                     break;
                 
                 default:
+                    std::cout<<"Enter a valid number!\n";
                     break;
                 }
             }
