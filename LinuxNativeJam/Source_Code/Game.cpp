@@ -55,8 +55,8 @@ void PlayGame()
      std::cout<<"You decided to pick up the bottle, it's corked shut. How are you going to open the bottle?\n";
      std::cout<<"1) Bottle Opener\n 2)Knife\n3) Shoe\n 4)Throw it\n";
      std::cin>>playerAction;
-     while(playerAction==1)
-     {}
+     while(playerAction<=1)
+     {
      switch(playerAction)
      {
         case 1: 
@@ -84,7 +84,7 @@ void PlayGame()
          break;
 
      }
-     
+     }
         break;
 
         case 2:
@@ -139,15 +139,36 @@ void PlayGame()
             std::cin>>timeTraveled;
             double rateOfSpeed=RateOfSpeed(milesTraveled,timeTraveled);
             double totalMilesTraveled=milesTraveled;
-            if(totalMilesTraveled<distanceToNextTown)
-            {
-                std::cout<<"You have "<<distanceToNextTown-milesTraveled <<" to the next town.";
-            
-            }
         }
     }
 }
 
+}
+void HandleTravel(int distanceTraveled,int milesToNextTown)
+{
+
+    if(distanceTraveled<distanceTraveled)
+            {
+                std::cout<<"You have "<<milesToNextTown-distanceTraveled <<" to the next town.";
+            
+            }
+            else if(distanceTraveled==milesToNextTown)
+            {
+                std::cout<<"You have made it to the the next town.\nWould you like to 1) Stop and gather information or 2) Keep moving?\n";
+                int playerChoice;
+                std::cin>>playerChoice;
+                switch (playerChoice)
+                {
+                case 1:
+                    /* code */
+                    break;
+                    case 2:
+                    break;
+                
+                default:
+                    break;
+                }
+            }
 }
 // main program function
 int main()

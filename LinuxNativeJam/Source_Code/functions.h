@@ -21,7 +21,3 @@ double RateOfSpeed(double distanceTraveled, double timeSpentTraveling)
     double rate=distanceTraveled/timeSpentTraveling;
     return rate;
 }
-void PrintDistanceToNextTown(int distanceToNextTown, int milesTraveled)
-{
-
-}
