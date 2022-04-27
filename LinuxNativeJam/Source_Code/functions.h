@@ -26,7 +26,7 @@ void HandleTravel(int distanceTraveled,int milesToNextTown)
 
     if(distanceTraveled<distanceTraveled)
             {
-                std::cout<<"You have "<<milesToNextTown-distanceTraveled <<" to the next town.";
+                std::cout<<"You have "<<milesToNextTown-distanceTraveled <<" miles to the next town.\n";
             
             }
             else if(distanceTraveled==milesToNextTown)
@@ -57,7 +57,9 @@ void HandleTravel(int distanceTraveled,int milesToNextTown)
                     #pragma endregion
                     break;
                     case 2:
-                    std::cout<<"Enter a valid number!\n";
+                    std::cout<<"You leave the town and keep moving";
+                    HandleTravel(distanceTraveled,milesToNextTown); 
+                    break;
                     #pragma region 
                     #pragma endregion
                     break;

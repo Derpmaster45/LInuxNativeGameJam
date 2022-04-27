@@ -156,7 +156,7 @@ void PlayGame()
             double distanceToNextTown=40;
             double timeTraveled;
             std::cin>>milesTraveled;
-            std::cout<<"How many hours will you be traveling today?\n The first town is"<<distanceToNextTown<<" away.";
+            std::cout<<"How many hours will you be traveling today?\n The first town is"<<distanceToNextTown<<" away.\n";
             std::cin>>timeTraveled;
             double rateOfSpeed=RateOfSpeed(milesTraveled,timeTraveled);
             double totalMilesTraveled=milesTraveled;
@@ -175,7 +175,7 @@ void PlayGame()
             double distanceToNextTown=40;
             double timeTraveled;
             std::cin>>milesTraveled;
-            std::cout<<"How many hours will you be traveling today?\n The first town is"<<distanceToNextTown<<" away.";
+            std::cout<<"How many hours will you be traveling today?\n The first town is"<<distanceToNextTown<<" away.\n";
             std::cin>>timeTraveled;
             double rateOfSpeed=RateOfSpeed(milesTraveled,timeTraveled);
             double totalMilesTraveled=milesTraveled;
@@ -189,7 +189,7 @@ void PlayGame()
             double distanceToNextTown=40;
             double timeTraveled;
             std::cin>>milesTraveled;
-            std::cout<<"How many hours will you be traveling today?\n The first town is"<<distanceToNextTown<<" away.";
+            std::cout<<"How many hours will you be traveling today?\n The first town is"<<distanceToNextTown<<" away.\n";
             std::cin>>timeTraveled;
             double rateOfSpeed=RateOfSpeed(milesTraveled,timeTraveled);
             double totalMilesTraveled=milesTraveled;
