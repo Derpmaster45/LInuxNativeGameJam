@@ -47,8 +47,8 @@ void PlayGame()
 
         std::cout << "You decide to go fishing, and while you are fishing a bottle floats by you, 1(do you pick it up, or 2(leave it alone?" << std::endl;
         std::cin >> playerChoice;
-        bool bottleOpened;
-        bool bottleCollected;
+        bool bottleOpened=false;
+        bool bottleCollected= false;
         switch (playerChoice)
         {
         case 1:
@@ -76,6 +76,7 @@ void PlayGame()
             case 4:
                 std::cout << "You throw it as hard as you can at a boulder you found, breaking the bottle on impact.\nYou retrive the paper from the shards of glass\n";
                 bottleCollected, bottleOpened = true;
+                bottleCollected = true;
                 break;
             default:
                 std::cout << "Enter a number 1-4 to open the bottle";
@@ -103,7 +104,7 @@ void PlayGame()
             std::cin >> leavingWhen;
             if (leavingWhen == "Today" || leavingWhen == "today")
             {
-                std::cout << "You quickly gather things you think you may need for this trip";
+                std::cout << "You quickly gather things you think you may need for this trip\n";
                 bool leftEarly = true;
                 if (playerOccupation == 1)
                 {
@@ -114,7 +115,7 @@ void PlayGame()
                     double distanceToNextTown = 40;
                     double timeTraveled;
                     std::cin >> milesTraveled;
-                    std::cout << "How many hours will you be traveling today?\n The first town is" << distanceToNextTown << " away.";
+                    std::cout << "How many hours will you be traveling today?\n The first town is " << distanceToNextTown << "miles away.";
                     std::cin >> timeTraveled;
                     double rateOfSpeed = RateOfSpeed(milesTraveled, timeTraveled);
                     double totalMilesTraveled = milesTraveled;
@@ -128,7 +129,7 @@ void PlayGame()
                     double distanceToNextTown = 40;
                     double timeTraveled;
                     std::cin >> milesTraveled;
-                    std::cout << "How many hours will you be traveling today?\n The first town is" << distanceToNextTown << " away.";
+                    std::cout << "How many hours will you be traveling today?\n The first town is" << distanceToNextTown << " miles away.";
                     std::cin >> timeTraveled;
                     double rateOfSpeed = RateOfSpeed(milesTraveled, timeTraveled);
                     double totalMilesTraveled = milesTraveled;
@@ -143,7 +144,7 @@ void PlayGame()
                     double distanceToNextTown = 40;
                     double timeTraveled;
                     std::cin >> milesTraveled;
-                    std::cout << "How many hours will you be traveling today?\n The first town is" << distanceToNextTown << " away.";
+                    std::cout << "How many hours will you be traveling today?\n The first town is" << distanceToNextTown << " miles away.";
                     std::cin >> timeTraveled;
                     double rateOfSpeed = RateOfSpeed(milesTraveled, timeTraveled);
                     double totalMilesTraveled = milesTraveled;
@@ -157,7 +158,7 @@ void PlayGame()
                     double distanceToNextTown = 40;
                     double timeTraveled;
                     std::cin >> milesTraveled;
-                    std::cout << "How many hours will you be traveling today?\n The first town is" << distanceToNextTown << " away.\n";
+                    std::cout << "How many hours will you be traveling today?\n The first town is" << distanceToNextTown << "miles away.\n";
                     std::cin >> timeTraveled;
                     double rateOfSpeed = RateOfSpeed(milesTraveled, timeTraveled);
                     double totalMilesTraveled = milesTraveled;
@@ -176,7 +177,7 @@ void PlayGame()
                     double distanceToNextTown = 40;
                     double timeTraveled;
                     std::cin >> milesTraveled;
-                    std::cout << "How many hours will you be traveling today?\n The first town is" << distanceToNextTown << " away.\n";
+                    std::cout << "How many hours will you be traveling today?\n The first town is" << distanceToNextTown << "miles away.\n";
                     std::cin >> timeTraveled;
                     double rateOfSpeed = RateOfSpeed(milesTraveled, timeTraveled);
                     double totalMilesTraveled = milesTraveled;
@@ -190,13 +191,13 @@ void PlayGame()
                     double distanceToNextTown = 40;
                     double timeTraveled;
                     std::cin >> milesTraveled;
-                    std::cout << "How many hours will you be traveling today?\n The first town is" << distanceToNextTown << " away.\n";
+                    std::cout << "How many hours will you be traveling today?\n NoteThe first town is" << distanceToNextTown << "miles away.\n";
                     std::cin >> timeTraveled;
                     double rateOfSpeed = RateOfSpeed(milesTraveled, timeTraveled);
                     double totalMilesTraveled = milesTraveled;
                     HandleTravel(milesTraveled, distanceToNextTown);
-                    totalMilesTraveled += milesTraveled;
-                    if (totalMilesTraveled >= 40)
+                    totalMilesTraveled = milesTraveled;
+                    if (totalMilesTraveled == 40|| milesTraveled==40)
                     {
                         distanceToNextTown = 120;
                         std::cout << "The distance to the next town is " << distanceToNextTown << " miles";
