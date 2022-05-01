@@ -55,12 +55,11 @@ void HandleTravel(int distanceTraveled,int milesToNextTown)
                     }
                     #pragma endregion
                     #pragma endregion
+                    #pragma region 
                     break;
                     case 2:
                     std::cout<<"You leave the town and keep moving";
-                    HandleTravel(distanceTraveled,milesToNextTown); 
                     break;
-                    #pragma region 
                     #pragma endregion
                     break;
                 
