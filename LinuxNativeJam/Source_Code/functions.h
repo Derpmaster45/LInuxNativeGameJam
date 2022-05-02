@@ -45,7 +45,7 @@ void HandleTravel(int distanceTraveled,int milesToNextTown)
                     switch (actionChoice)
                     {
                     case 1:
-                    std::cout<<"This code has been reached---TESTING Purpose ONLY";
+                    std::cout<<"You have decided to go to the tavern to try and gather information";
                         break;
                     case 2:
                      std::cout<<"This code has been reached---TESTING Purpose ONLY";
