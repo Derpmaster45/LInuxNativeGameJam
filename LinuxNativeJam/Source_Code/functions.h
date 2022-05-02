@@ -45,7 +45,26 @@ void HandleTravel(int distanceTraveled,int milesToNextTown)
                     switch (actionChoice)
                     {
                     case 1:
-                    std::cout<<"This code has been reached---TESTING Purpose ONLY";
+                        std::cout<<"You have decided to go to the tavern to try and gather information\n The tavern is packed with people of various professions. Who would you like to talk to first?\n";
+                        int choice;
+                        std::cout<<"You can talk to \n1) Barkeeper \n 2 the group of farmers at the table to your right\n 3) the coal miner sitting at the table behind you.\n 4) the drunkard at the bar.";
+                        std::cin>>choice;
+                        #pragma region barExploration
+                        switch (choice)
+                        {
+                        case 1:
+                            /* code */
+                            break;
+                        case 2:
+                        break;
+                        case 3:
+                        break;
+                        case 4:
+                        break;
+                        default:
+                            break;
+                        }
+                        #pragma endregion                        
                         break;
                     case 2:
                      std::cout<<"This code has been reached---TESTING Purpose ONLY";
@@ -55,12 +74,11 @@ void HandleTravel(int distanceTraveled,int milesToNextTown)
                     }
                     #pragma endregion
                     #pragma endregion
+                    #pragma region 
                     break;
                     case 2:
                     std::cout<<"You leave the town and keep moving";
-                    HandleTravel(distanceTraveled,milesToNextTown); 
                     break;
-                    #pragma region 
                     #pragma endregion
                     break;
                 
