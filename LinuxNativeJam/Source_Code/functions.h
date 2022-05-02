@@ -4,9 +4,9 @@ void WeaponDestroyed() // add the weapon name
 {
     
 }
-void CheckMap(std::string location ) 
+void CheckMap(std::string location,int milesToNextLandmark, int milesToNextTown ) 
 {
-
+std::cout<<"Your current location is "<<location <<" ,and the next land mark is "<< milesToNextLandmark<<" miles away. The next town is "<<milesToNextTown<<" miles away.";
 }
 void CheckBalance(int moneyRemaining)
 {
@@ -36,7 +36,7 @@ void HandleTravel(int distanceTraveled,int milesToNextTown)
                 std::cin>>playerChoice;
                 switch (playerChoice)
                 {
-                case 1:
+                    case 1:
                     #pragma region 
                     std::cout<<"Where would you like to go to gather information?\n 1) Tavern 2)";
                     int actionChoice;
@@ -44,7 +44,7 @@ void HandleTravel(int distanceTraveled,int milesToNextTown)
                     #pragma region 
                     switch (actionChoice)
                     {
-                    case 1:
+                        case 1:
                         std::cout<<"You have decided to go to the tavern to try and gather information\n The tavern is packed with people of various professions. Who would you like to talk to first?\n";
                         int choice;
                         std::cout<<"You can talk to \n1) Barkeeper \n 2 the group of farmers at the table to your right\n 3) the coal miner sitting at the table behind you.\n 4) the drunkard at the bar.";
