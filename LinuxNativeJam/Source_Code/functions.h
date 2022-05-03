@@ -14,7 +14,7 @@ void CheckBalance(int moneyRemaining)
 }
 void ExitGame()
 {
-    // enter exit code here
+    exit(0);
 }
 double RateOfSpeed(double distanceTraveled, double timeSpentTraveling)
 {
@@ -87,4 +87,12 @@ void HandleTravel(int distanceTraveled,int milesToNextTown)
                     break;
                 }
             }
+}
+void distanceToNextLandmark(int distanceToLandmark)
+{
+
+}
+void shop()
+{
+    
 }
