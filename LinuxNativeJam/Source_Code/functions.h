@@ -1,5 +1,7 @@
 #pragma once
 #include<string>
+#include <sstream>
+#include <limits>
 void WeaponDestroyed() // add the weapon name 
 {
     
@@ -88,11 +90,26 @@ void HandleTravel(int distanceTraveled,int milesToNextTown)
                 }
             }
 }
-void distanceToNextLandmark(int distanceToLandmark)
+void distanceToNextLandmark(int distanceToLandmark, int milesTraveled)
 {
-
+    std::cout<<"You have "<<distanceToLandmark-milesTraveled<<" to the next landmark";
 }
 void shop()
 {
+    
+}
+// serialization of inputs
+int GetInt()
+{
+    int initalInput=0;
+    while (!(std::cin>>initalInput))
+    {
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits <streamsize>std::max(),"\n");
+      std::cout<<"Please enter a vaild number\n";
+       
+    }
+         std::cin.ignore(std::numeric_limits <streamsize> std::max(), '\n');
+       return(initalInput);
     
 }
