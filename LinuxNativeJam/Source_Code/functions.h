@@ -105,11 +105,11 @@ int GetInt()
     while (!(std::cin>>initalInput))
     {
         std::cin.clear();
-        std::cin.ignore(std::numeric_limits <streamsize>std::max(),"\n");
+       // std::cin.ignore(std::numeric_limits <streamsize>std::max(),"\n");
       std::cout<<"Please enter a vaild number\n";
        
     }
-         std::cin.ignore(std::numeric_limits <streamsize> std::max(), '\n');
+        // std::cin.ignore(std::numeric_limits <streamsize> std::max(), '\n');
        return(initalInput);
     
 }

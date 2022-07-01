@@ -171,26 +171,19 @@ void PlayGame()
             {
                 playerMoney=1000;
                 CheckBalance(playerMoney);
-                std::cout<<"Your off on your voyage! How far would you like to travel? \n";
-                double milesTraveled;
-                double distanceToNextTown=40;
-                double timeTraveled;
-                std::cin>>milesTraveled;
-                std::cout<<"How many hours will you be traveling today?\n The first town is"<<distanceToNextTown<<" miles away.\n";
-                std::cin>>timeTraveled;
-                double rateOfSpeed=RateOfSpeed(milesTraveled,timeTraveled);
-                double totalMilesTraveled=milesTraveled;
             }
             else if(playerOccupation==2)
             {
                 playerMoney=15000;
                 CheckBalance(playerMoney);
-                std::cout<<"Your off on your voyage! How far would you like to travel? \n";
+               
+            }
+             std::cout<<"Your off on your voyage! How far would you like to travel? \n";
                 double milesTraveled;
                 double distanceToNextTown=40;
                 double timeTraveled;
                 std::cin>>milesTraveled;
-                std::cout<<"How many hours will you be traveling today?\n The first town is"<<distanceToNextTown<<" away.\n";
+                std::cout<<"How many hours will you be traveling today?\n The first town is"<<distanceToNextTown<<" miles away.\n";
                 std::cin>>timeTraveled;
                 double rateOfSpeed=RateOfSpeed(milesTraveled,timeTraveled);
                 double totalMilesTraveled=milesTraveled;
@@ -201,7 +194,6 @@ void PlayGame()
                     distanceToNextTown=120;
                     HandleTravel(milesTraveled,distanceToNextTown);
                 }
-            }
             
         }
     }
