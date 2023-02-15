@@ -12,11 +12,14 @@ void PlayGame()
 {
     bool isOccupationChosen=false;
     int playerAction;
+    bool haveMapMeaning=false;
+    int totalTownsVisited;
  while(isOccupationChosen==false){
     
     std::cout<<"It is a bright sunny day in June of 1884, and you have just gotten done with your work for the day.\nWhat is it that you do for a living?";
     std::cout<<"\n1) a blacksmith, who can get a discount on materials used to repair weapons, and can fix other peoples weapons for a fee.\n 2) a wealthy banker, who has alot of money, but cannot repair tools.\n";
     std::cout<< "Enter a number from the above choices: \n";
+    // player information
     int playerOccupation;
     int playerChoice=0;
     double playerMoney;
@@ -55,7 +58,7 @@ void PlayGame()
      std::cout<<"You decided to pick up the bottle, it's corked shut. How are you going to open the bottle?\n";
      std::cout<<"1) Bottle Opener\n 2)Knife\n3) Shoe\n 4)Throw it\n";
      std::cin>>playerAction;
-    
+    while(bottleCollected==true && bottleOpened==false){
      switch(playerAction)
      {
         case 1: 
@@ -84,7 +87,7 @@ void PlayGame()
 
      }
         break;
-
+    }
         case 2:
         std::cout<<"You left the bottle alone\n";
         bottleOpened=false;
@@ -117,7 +120,7 @@ void PlayGame()
                 std::cin>>timeTraveled;
                 double rateOfSpeed=RateOfSpeed(milesTraveled,timeTraveled);
                 double totalMilesTraveled=milesTraveled;
-                HandleTravel(milesTraveled,distanceToNextTown);
+                HandleTravel(milesTraveled,distanceToNextTown,haveMapMeaning);
             }
             else if(playerOccupation==2)
             {
@@ -132,7 +135,7 @@ void PlayGame()
                 std::cin>>timeTraveled;
                 double rateOfSpeed=RateOfSpeed(milesTraveled,timeTraveled);
                 double totalMilesTraveled=milesTraveled;
-                HandleTravel(milesTraveled,distanceToNextTown);
+                HandleTravel(milesTraveled,distanceToNextTown, haveMapMeaning);
             }
             else if(playerOccupation==2)
             {
@@ -161,7 +164,7 @@ void PlayGame()
                 std::cin>>timeTraveled;
                 double rateOfSpeed=RateOfSpeed(milesTraveled,timeTraveled);
                 double totalMilesTraveled=milesTraveled;
-                HandleTravel(milesTraveled,distanceToNextTown);
+                HandleTravel(milesTraveled,distanceToNextTown, haveMapMeaning);
 
             }
         }
@@ -178,6 +181,9 @@ void PlayGame()
                 CheckBalance(playerMoney);
                
             }
+            // game complete will be used for a while loop for the main gameplay loop.
+            bool gameComplete=false;
+            while(gameComplete==false){
              std::cout<<"Your off on your voyage! How far would you like to travel? \n";
                 double milesTraveled;
                 double distanceToNextTown=40;
@@ -187,16 +193,18 @@ void PlayGame()
                 std::cin>>timeTraveled;
                 double rateOfSpeed=RateOfSpeed(milesTraveled,timeTraveled);
                 double totalMilesTraveled=milesTraveled;
-                HandleTravel(milesTraveled,distanceToNextTown);
+                HandleTravel(milesTraveled,distanceToNextTown,haveMapMeaning);
                 totalMilesTraveled+=milesTraveled;
                 if(milesTraveled==40||totalMilesTraveled==40)
                 {
                     distanceToNextTown=120;
-                    HandleTravel(milesTraveled,distanceToNextTown);
+                    HandleTravel(milesTraveled,distanceToNextTown,haveMapMeaning);
                 }
-            
+            }
         }
+
     }
+    
 }
 
 }

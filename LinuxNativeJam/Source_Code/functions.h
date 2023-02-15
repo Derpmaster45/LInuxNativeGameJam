@@ -23,7 +23,7 @@ double RateOfSpeed(double distanceTraveled, double timeSpentTraveling)
     double rate=distanceTraveled/timeSpentTraveling;
     return rate;
 }
-void HandleTravel(int distanceTraveled,int milesToNextTown)
+void HandleTravel(int distanceTraveled,int milesToNextTown ,bool haveMapMeaning)
 {
 
     if(distanceTraveled<distanceTraveled)
@@ -46,6 +46,7 @@ void HandleTravel(int distanceTraveled,int milesToNextTown)
                     #pragma region 
                     switch (actionChoice)
                     {
+                        // case 1 = tavern 
                         case 1:
                         std::cout<<"You have decided to go to the tavern to try and gather information\n The tavern is packed with people of various professions. Who would you like to talk to first?\n";
                         int choice;
@@ -55,7 +56,8 @@ void HandleTravel(int distanceTraveled,int milesToNextTown)
                         switch (choice)
                         {
                         case 1:
-                            /* code */
+                            // bartender dialouge
+                            std::cout<<"You decided to talk to the bartender. You approach the bar, order a drink \n"; 
                             break;
                         case 2:
                         break;
@@ -69,7 +71,7 @@ void HandleTravel(int distanceTraveled,int milesToNextTown)
                         #pragma endregion                        
                         break;
                     case 2:
-                     std::cout<<"This code has been reached---TESTING Purpose ONLY";
+                  //   std::cout<<"This code has been reached---TESTING Purpose ONLY";
                     break;
                     default:
                         break;
